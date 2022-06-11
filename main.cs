@@ -1,7 +1,7 @@
 // Created by: Joanne Santhosh
-// Created on: Apr 2022
+// Created on: May 2022
 //
-// This program calculates the volume of a triangle
+// This program guesses the number from 1 - 6
 
 using System;
 
@@ -9,22 +9,20 @@ class Program
 {
      public static void Main(string[] args)
     {
-        // This program calculates the volume of a triangle
-        int lengthOfTriangle;
-        int widthOfTriangle;
-        int heightOfTriangle;
-        Console.WriteLine("This program calculates the volume of a triangle");
-        Console.WriteLine("");
+       System.Random random = new System.Random();
+       int number = random.Next(1,6);
+       int userGuess;
 
-        Console.WriteLine("Enter the length of the triangle.");
-        lengthOfTriangle = (Convert.ToInt32(Console.ReadLine()));
-        Console.Write("Enter the width of the triangle. ");
-        widthOfTriangle = (Convert.ToInt32(Console.ReadLine()));
-        Console.WriteLine("Enter the height of the triangle.");
-        heightOfTriangle = (Convert.ToInt32(Console.ReadLine()));
-        Console.WriteLine("");
-        Console.WriteLine("Area is: " + (lengthOfTriangle * widthOfTriangle * heightOfTriangle / 3) + " cm³ ");
+      // input
+      Console.WriteLine("Guess a number between 1-6");
+      userGuess = int.Parse(Console.ReadLine());
 
+      // process
+      if (userGuess == number) {
+        Console.WriteLine("Correct answer!");
+      } else {
+        Console.WriteLine("Incorrect, try again!");
+      }
         Console.WriteLine("\nDone.");
     }
 }
