@@ -10,7 +10,7 @@ class Program
     public static void Main(string[] args)
     {
         System.Random random = new System.Random();
-        int number = random.Next(1,6);
+        int number = random.Next (1,6);
         int userGuess;
 
         // input
@@ -21,8 +21,7 @@ class Program
         if (userGuess == number)
             Console.WriteLine("Correct answer!");
         else
-            Console.WriteLine("Incorrect, try again!");
-      
+            Console.WriteLine("Incorrect, try again!");      
         Console.WriteLine("\nDone.");
     }
 }
